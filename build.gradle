@@ -1,0 +1,57 @@
+group 'practicejava'
+version '1.0-SNAPSHOT'
+
+
+apply plugin: 'java'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'http://mvnrepository.com/artifact/'
+    }
+    maven {
+        url 'https://st-nexus.savagebeast.com/nexus/content/groups/public'
+    }
+    maven{
+        url 'https://st-nexus.savagebeast.com/nexus/content/repositories/confluent/'
+    }
+        jcenter()
+
+    mavenLocal()
+}
+
+dependencies {
+    compile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.glassfish:javax.json:1.1.2'
+    // https://mvnrepository.com/artifact/javax.validation/validation-api
+    compile group: 'javax.validation', name: 'validation-api', version: '1.0.0.GA'
+    compile 'org.infinispan:infinispan-core:9.2.0.CR3'
+    compile 'redis.clients:jedis:2.8.1'
+    // https://mvnrepository.com/artifact/org.asynchttpclient/async-http-client
+    compile group: 'org.asynchttpclient', name: 'async-http-client', version: '2.4.8'
+
+
+    // compile group:'com.paypal.sdk' ,name:'paypal-base' ,version:'1.0.0'
+    // https://mvnrepository.com/artifact/com.paypal.sdk/paypal-base
+   // compile  group: 'com.paypal.sdk', name: 'paypal-base', version: '1.1.0'
+    //compile  'com.paypal.sdk:paypal-base:1.1.0'
+
+    // https://mvnrepository.com/artifact/com.paypal.sdk/paypal-core
+    //compile  group: 'com.paypal.sdk', name: 'paypal-core', version: '1.1'
+    //compile 'com.pandora.charon:charon-core:3.2.18-task-RADIO-21388-SNAPSHOT'
+    compile 'com.pandora.charon:charon-core:3.2.71'
+    // https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api
+   // compile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: '1.0.2.Final'
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager
+    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.16.Final'
+    compile group:'commons-net',name: 'commons-net', version: '3.6'
+    compile group:'org.mockftpserver',name:'MockFtpServer',version:'2.7.1'
+
+
+    //compile project(':charon-core')
+// https://mvnrepository.com/artifact/com.paypal.sdk/permissionssdk
+    //compile name: 'permissionssdk', version: '2.1.96'
+    testImplementation 'org.hamcrest:hamcrest-library:1.3'
+
+}

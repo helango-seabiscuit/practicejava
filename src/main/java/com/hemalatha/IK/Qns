@@ -1,0 +1,13 @@
+Move all letters to left side (preserve in place)
+ex: [0,a,1,9,3,z,b,r,6] -> [a,z,b,r..] numbers can be in any order
+
+Reverse words in a String "I will do it." -> "it. do will I"
+[][]word1[]word2[] -> []word2[]word1[][] []-single space
+word1;[]word2. ->word2.[]word1;
+
+Print matrix in spiral order
+XYA
+MBC
+PQR
+
+O/P: XYACRQPMB
