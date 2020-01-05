@@ -1,7 +1,8 @@
 package com.hemalatha.intparker;
 
-import com.savagebeast.util.Pair;
-import org.apache.commons.codec.digest.DigestUtils;
+
+import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.tuple.Pair;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -35,7 +36,7 @@ public class DuplicateFilesFinder {
 
 
 		System.out.println("DUPLICATE FILES ORIGINAL -------> DUPLICATES");
-		dups.forEach(d -> {System.out.println(d.first +"----> "+ d.second);});
+		dups.forEach(d -> {System.out.println(d.getLeft() +"----> "+ d.getRight());});
 	}
 
 	private static void findDuplicate(Path p){
@@ -69,10 +70,10 @@ public class DuplicateFilesFinder {
 				Path inMap = dupTracker.get(content);
 
 				Pair<Path,Path> res = Files.getLastModifiedTime(inMap)
-						.compareTo(Files.getLastModifiedTime(p)) > 0 ? new Pair(p.getFileName(),inMap.getFileName())
-						                                               :new Pair(inMap.getFileName(),p.getFileName());
+						.compareTo(Files.getLastModifiedTime(p)) > 0 ? new ImmutablePair<>(p.getFileName(),inMap.getFileName())
+						                                               :new ImmutablePair<>(inMap.getFileName(),p.getFileName());
 				dups.add(res);
-				dupTracker.put(content,res.second);
+				dupTracker.put(content,res.getRight());
 				return;
 			}
 			dupTracker.put(content,p);

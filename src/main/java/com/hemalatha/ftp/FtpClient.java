@@ -1,6 +1,5 @@
 package com.hemalatha.ftp;
 
-import org.apache.commons.io.IOExceptionWithCause;
 import org.apache.commons.net.PrintCommandListener;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;

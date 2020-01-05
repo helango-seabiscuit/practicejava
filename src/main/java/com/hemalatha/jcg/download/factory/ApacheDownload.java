@@ -12,7 +12,7 @@ public class ApacheDownload implements FileDownload {
 		int CONNECTION_TIMEOUT = 10000;
 		int READ_TIMEOUT = 10000;
 		try {
-			FileUtils.copyURLToFile(new URL(url),new File(outputFileName),CONNECTION_TIMEOUT,READ_TIMEOUT);
+			FileUtils.copyURLToFile(new URL(url),new File(outputFileName));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

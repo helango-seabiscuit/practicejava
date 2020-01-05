@@ -5,7 +5,9 @@ public class BinarySearchTest {
 	public static void main(String[] args) {
 
 		int arr[] = new int[] {4,8,12,44,48,56,100};
-		System.out.println(binSearch(arr,100));
+		//System.out.println(binSearch(arr,100));
+		//System.out.println("testing print");
+
 	}
 
 	public static int binSearch(int [] arr, int searchElem){
