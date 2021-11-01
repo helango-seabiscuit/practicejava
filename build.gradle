@@ -23,55 +23,55 @@ repositories {
 }
 
 dependencies {
-    compile group: 'junit', name: 'junit', version: '4.12'
-    compile 'org.glassfish:javax.json:1.1.2'
+    implementation group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.glassfish:javax.json:1.1.2'
     // https://mvnrepository.com/artifact/javax.validation/validation-api
-    compile group: 'javax.validation', name: 'validation-api', version: '1.0.0.GA'
-    compile 'org.infinispan:infinispan-core:9.2.0.CR3'
-    compile 'redis.clients:jedis:2.8.1'
+    implementation group: 'javax.validation', name: 'validation-api', version: '1.0.0.GA'
+    implementation 'org.infinispan:infinispan-core:9.2.0.CR3'
+    implementation 'redis.clients:jedis:2.8.1'
     // https://mvnrepository.com/artifact/org.asynchttpclient/async-http-client
-    compile group: 'org.asynchttpclient', name: 'async-http-client', version: '2.4.8'
-    compile 'com.typesafe:config:1.3.4'
+    implementation group: 'org.asynchttpclient', name: 'async-http-client', version: '2.4.8'
+    implementation 'com.typesafe:config:1.3.4'
 
     // https://mvnrepository.com/artifact/org.apache.commons/commons-io
-    compile group: 'org.apache.commons', name: 'commons-io', version: '1.3.2'
+    implementation group: 'org.apache.commons', name: 'commons-io', version: '1.3.2'
 
     // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
-    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
 
     // https://mvnrepository.com/artifact/com.google.guava/guava
-    compile group: 'com.google.guava', name: 'guava', version: 'r05'
+    implementation group: 'com.google.guava', name: 'guava', version: 'r05'
 
     // https://mvnrepository.com/artifact/commons-codec/commons-codec
-    compile group: 'commons-codec', name: 'commons-codec', version: '1.9'
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.9'
 
     // https://mvnrepository.com/artifact/joda-time/joda-time
-    compile group: 'joda-time', name: 'joda-time', version: '2.10.5'
+    implementation group: 'joda-time', name: 'joda-time', version: '2.10.5'
 
     // https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
-    compile group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.2.2'
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.2.2'
 
 
-    // compile group:'com.paypal.sdk' ,name:'paypal-base' ,version:'1.0.0'
+    // implementation group:'com.paypal.sdk' ,name:'paypal-base' ,version:'1.0.0'
     // https://mvnrepository.com/artifact/com.paypal.sdk/paypal-base
-   // compile  group: 'com.paypal.sdk', name: 'paypal-base', version: '1.1.0'
-    //compile  'com.paypal.sdk:paypal-base:1.1.0'
+   // implementation  group: 'com.paypal.sdk', name: 'paypal-base', version: '1.1.0'
+    //implementation  'com.paypal.sdk:paypal-base:1.1.0'
 
     // https://mvnrepository.com/artifact/com.paypal.sdk/paypal-core
-    //compile  group: 'com.paypal.sdk', name: 'paypal-core', version: '1.1'
-    //compile 'com.pandora.charon:charon-core:3.2.18-task-RADIO-21388-SNAPSHOT'
-    //compile 'com.pandora.charon:charon-core:3.3.18'
+    //implementation  group: 'com.paypal.sdk', name: 'paypal-core', version: '1.1'
+    //implementation 'com.pandora.charon:charon-core:3.2.18-task-RADIO-21388-SNAPSHOT'
+    //implementation 'com.pandora.charon:charon-core:3.3.18'
     // https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api
-   // compile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: '1.0.2.Final'
+   // implementation group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: '1.0.2.Final'
     // https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager
-    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.16.Final'
-    compile group:'commons-net',name: 'commons-net', version: '3.6'
-    compile group:'org.mockftpserver',name:'MockFtpServer',version:'2.7.1'
+    implementation group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.16.Final'
+    implementation group:'commons-net',name: 'commons-net', version: '3.6'
+    implementation group:'org.mockftpserver',name:'MockFtpServer',version:'2.7.1'
 
 
-    //compile project(':charon-core')
+    //implementation project(':charon-core')
 // https://mvnrepository.com/artifact/com.paypal.sdk/permissionssdk
-    //compile name: 'permissionssdk', version: '2.1.96'
+    //implementation name: 'permissionssdk', version: '2.1.96'
     testImplementation 'org.hamcrest:hamcrest-library:1.3'
 
 }
