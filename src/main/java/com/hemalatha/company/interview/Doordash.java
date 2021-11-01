@@ -1,7 +1,10 @@
 package com.hemalatha.company.interview;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 //https://leetcode.com/discuss/interview-question/1367130/doordash-phone-interview
 public class Doordash {
@@ -18,11 +21,52 @@ public class Doordash {
             this.isActive = isActive;
             this.children = new ArrayList<>();
         }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Node node = (Node) o;
+            return value == node.value && key.equals(node.key);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(key, value);
+        }
     }
 
     public static int getModifiedItems(Node oldMenu, Node newMenu) {
-        int count=0;
+        if(oldMenu == null && newMenu == null){
+            return 0;
+        }
+        if(oldMenu == null || newMenu == null ){
+            return oldMenu == null? newMenu.children.size()+1: oldMenu.children.size()+1;
+        }
+        if(!oldMenu.equals(newMenu)){
+           return 1;
+        }
+        int count = 0;
+        Map<String,Node> childrenOld = getChildren(oldMenu);
+        Map<String,Node> childrenNew = getChildren(newMenu);
+        for(String key:childrenOld.keySet()){
+            count += getModifiedItems(childrenOld.get(key),childrenNew.getOrDefault(key,null));
+        }
+
+        for(String k:childrenNew.keySet()){
+            if(!childrenOld.containsKey(k)){
+                count+= getModifiedItems(null,childrenNew.get(k));
+            }
+        }
         return count;
+    }
+
+    private static Map<String,Node> getChildren(Node parent){
+        Map<String,Node> map = new HashMap<>();
+        for(Node n:parent.children){
+            map.put(n.key,n);
+        }
+        return map;
     }
 
     public static void main(String[] args) {
@@ -48,10 +92,9 @@ public class Doordash {
         Node c = new Node("c", 3, true);
         Node d = new Node("d", 4, true);
         Node e = new Node("e", 5, true);
-        Node g = new Node("g", 7, true);
 
         a.children.add(b);
-        a.children.add(c);
+      //  a.children.add(c);
 
         b.children.add(d);
         b.children.add(e);
