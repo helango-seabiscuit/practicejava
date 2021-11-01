@@ -9,7 +9,7 @@ sourceCompatibility = 11
 repositories {
     mavenCentral()
     maven {
-        url 'http://mvnrepository.com/artifact/'
+        url 'https://mvnrepository.com/artifact/'
     }
     maven {
         url 'https://st-nexus.savagebeast.com/nexus/content/groups/public'
