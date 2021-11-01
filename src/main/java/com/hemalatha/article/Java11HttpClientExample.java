@@ -136,7 +136,7 @@ public class Java11HttpClientExample {
     private void sendWithAuthentication() throws IOException, InterruptedException {
         HttpClient httpClient = HttpClient.newBuilder()
                 .authenticator(new Authenticator() {
-                    @Overridex
+//                    @Overridex
                     protected PasswordAuthentication getPasswordAuthentication() {
                         return new PasswordAuthentication(
                                 "god",
