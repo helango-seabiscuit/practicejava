@@ -10,6 +10,9 @@ public class PalindromicDecomposition {
         List<List<String>> result = new ArrayList<>();
         palindromeDecompose("611116",0,new ArrayList<>(), result );
         System.out.println(result);
+        result.clear();
+        palindromeDecompose("racecarannakayak",0,new ArrayList<>(),result);
+        System.out.println(result);
 
     }
 
